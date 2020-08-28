@@ -11,7 +11,8 @@ trait OutputMessage {
 
 case class WelcomeUser(user: String) extends OutputMessage {
   override def forUser(targetUser: String): Boolean = targetUser == user
-  override def toString: String                     = s"Welcome to ChatServer version ${BuildInfo.version} - an example for http4s"
+  override def toString: String                     = ""
+    //s"Welcome to ChatServer version ${BuildInfo.version} - an example for http4s"
 }
 
 case class SendToUser(user: String, text: String) extends OutputMessage {

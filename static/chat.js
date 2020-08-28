@@ -14,8 +14,8 @@ var chat = {}; // Namespace
 	chat.initPage = function () {
 		document.getElementById(chat.ENTRY_ID).focus();
 
-		chat.writeOutput('Initializing ChatServer client.');
-		chat.writeOutput('Enter your username:');
+		chat.writeOutput('Welcome to the Low Company of Gamesters and Gamblers!');
+		chat.writeOutput('To join in, please enter your name at the bottom of the page.');
 	};
 
     chat.connect = function() {
@@ -24,8 +24,8 @@ var chat = {}; // Namespace
 
         chat.ws = new WebSocket(url.href);
         chat.ws.onopen = function(evt) {
-            chat.writeOutput('Connection established');
-            chat.writeOutput('Type \'/help\' for a list of commands');
+            chat.writeOutput('Connected!');
+            chat.writeOutput('Type \'/help\' at any time for a list of commands');
         };
 
         chat.ws.onclose = function(evt) {
